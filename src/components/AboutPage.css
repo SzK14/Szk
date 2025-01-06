@@ -1,0 +1,146 @@
+/* Estilo para la página About */
+.about-page {
+    display: flex;
+    justify-content: flex-start; /* Mantener la alineación de los elementos en fila */
+    align-items: flex-start; /* Asegura que todo esté alineado al inicio */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio es pequeño */
+  }
+  
+  .profile-info {
+    flex: 1;
+    text-align: left; /* Mantener el texto alineado a la izquierda */
+    margin-right: 40px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .profile-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  .focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+  
+  .profile-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .bio {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  
+  .bio:hover {
+    color: #ccbfbf;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .social-link i {
+    margin-right: 8px;
+    font-size: 1.5rem; /* Tamaño del ícono */
+  }
+  
+  .social-link:hover {
+    color: #4caf50;
+  }
+  
+  /* Estilo para la sección de habilidades (Skills) */
+  .skills-section {
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+    margin-top: 40px; /* Espacio arriba para separarlo del contenido superior */
+  }
+  
+  .skills-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .skills-section p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 40px;
+  }
+  
+  .skills-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los íconos */
+    flex-wrap: wrap;
+  }
+  
+  .skills-icons i {
+    font-size: 3rem; /* Ajusta el tamaño de los íconos */
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .skills-icons i:hover {
+    transform: scale(1.1); /* Efecto de aumento cuando pasa el ratón */
+    color: #4caf50; /* Cambia el color al verde */
+  }
+  
+  @media (max-width: 768px) {
+    .about-page {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      text-align: center;
+    }
+  
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      margin-left: 0; /* Eliminar espacio a la izquierda en pantallas pequeñas */
+      margin-bottom: 20px;
+    }
+  
+    .profile-info h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-info p {
+      font-size: 1rem;
+    }
+  
+    .skills-section {
+      margin-top: 20px; /* Ajustar el margen en pantallas más pequeñas */
+    }
+  }
+  

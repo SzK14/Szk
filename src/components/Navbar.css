@@ -1,0 +1,67 @@
+/* Estilo para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Estilo para los enlaces */
+  .navbar-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Añadido padding para los botones */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Hover effect */
+  .navbar-item:hover {
+    background-color: #4caf50; /* Fondo verde al pasar el ratón */
+    color: #fff;
+  }
+  
+  .navbar-item i {
+    margin-right: 8px;
+  }
+  
+  /* Estilo para la hora */
+  .navbar-right .time {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  body {
+    padding-top: 60px; /* Espacio para que el contenido no quede debajo de la barra */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-left {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

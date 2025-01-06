@@ -1,0 +1,118 @@
+/* Estilo general para la página de proyectos */
+.work-page {
+    padding: 40px;
+    color: #fff;
+
+    text-align: center;
+  }
+  
+  .work-page h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Contenedor para cada proyecto */
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Por ahora solo una columna */
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  /* Contenedor de cada proyecto, organizando en dos partes */
+  .project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f2f2f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Alineación de la parte izquierda (imagen y herramientas) */
+  .project-left {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .cover-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .tools img {
+    font-size: 2rem;
+    color: #fff;
+    margin: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tools img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Alineación de la parte derecha (título, descripción y código) */
+  .project-right {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .project-right h2 {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+  }
+  
+  .project-right .description {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 20px;
+  }
+  
+  .project-right .code {
+    margin-bottom: 20px;
+  }
+  
+  .project-right .code h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .project-right .code pre {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+  }
+  
+  /* Estilo responsive para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .project {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project-left,
+    .project-right {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .cover-image img {
+      max-width: 200px; /* Reducir el tamaño de la imagen */
+    }
+  
+    .tools {
+      margin-top: 10px;
+    }
+  }
+  

@@ -1,0 +1,76 @@
+/* Estilo para la página About */
+.about-page {
+    display: flex;
+    justify-content: space-between; /* Organizar la imagen y el texto a los lados */
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 40px; /* Asegura que haya espacio entre la imagen y el texto */
+  }
+  
+  .profile-info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .profile-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .profile-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .bio {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .social-link:hover {
+    color: #4caf50;
+  }
+  
+  @media (max-width: 768px) {
+    .about-page {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      text-align: center;
+    }
+  
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      margin-left: 0; /* Eliminar espacio a la izquierda en pantallas pequeñas */
+      margin-bottom: 20px;
+    }
+  
+    .profile-info h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-info p {
+      font-size: 1rem;
+    }
+  }
+  
