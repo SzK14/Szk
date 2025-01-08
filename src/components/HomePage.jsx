@@ -12,7 +12,11 @@ const HomePage = () => {
       <div className="profile-container">
         <div className="profile-info">
           <p className="bio">
-            Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions.
+            I am a software developer passionate about creating innovative and efficient solutions. 
+            With experience in JavaScript, React, CSS, and HTML, 
+            I enjoy transforming ideas into functional and attractive web applications.
+             My goal is to continue learning and growing in the field of software development, 
+             contributing to projects that make a difference.
           </p>
           <a href="/about" className="btn">About</a>
         </div>
@@ -31,6 +35,15 @@ const HomePage = () => {
           <li>GitHub</li>
           <li>Figma</li>
         </ul>
+      </div>
+      <div className="projects-container">
+        <div className="projects-grid">
+          <div className="project-item">
+            <img src="/src/assets/GameLogo.png" alt="Game" />
+            <h3>Abyssal Ascent</h3>
+            <p>2D Sidescroller Game made on Unity</p>
+          </div>
+        </div>
       </div>
     </div>
   );

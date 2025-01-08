@@ -136,3 +136,61 @@
   font-size: 1.2em;
   margin: 5px 0;
 }
+.projects-container {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+.projects-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Grid para organizar los proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto ajusta las columnas según el tamaño */
+  gap: 20px; /* Espacio entre los elementos */
+  justify-items: center;
+}
+
+/* Estilo para cada item del proyecto */
+.project-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para los items */
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen del proyecto */
+.project-image {
+  width: 100%;
+  height: fit-content;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Estilo de los títulos y descripciones */
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #666;
+}
