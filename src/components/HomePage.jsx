@@ -43,6 +43,21 @@ const HomePage = () => {
             <h3>Abyssal Ascent</h3>
             <p>2D Sidescroller Game made on Unity</p>
           </div>
+          <div className="project-item">
+            <img src="/src/assets/GameLogo.png" alt="Game" />
+            <h3>Stick Dots</h3>
+            <p>2D Sidescroller Game made on Unity</p>
+          </div>
+          <div className="project-item">
+            <img src="/src/assets/GameLogo.png" alt="Game" />
+            <h3>Mountain Pool & Spa</h3>
+            <p>2D Sidescroller Game made on Unity</p>
+          </div>
+          <div className="project-item">
+            <img src="/src/assets/GameLogo.png" alt="Game" />
+            <h3>SkyTrain Surfers</h3>
+            <p>2D Sidescroller Game made on Unity</p>
+          </div>
         </div>
       </div>
     </div>
