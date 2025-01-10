@@ -149,7 +149,7 @@
 
 /* Grid para organizar los proyectos */
 .projects-grid {
-  display: grid;
+  display: ruby;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto ajusta las columnas según el tamaño */
   gap: 20px; /* Espacio entre los elementos */
   justify-items: center;
@@ -163,6 +163,7 @@
   overflow: hidden;
   padding: 20px;
   width: 80%;
+
   max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
