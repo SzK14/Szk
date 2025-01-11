@@ -6,7 +6,9 @@ const HomePage = () => {
     <div className="home-page">
       <div className="cover-image">
         <div className="fog-effect">
-          <h1>Software Developer</h1>
+          <h1>Sebastian Garcia</h1>
+          <p>Web / Mobile / Games</p>
+          <p>Developer</p>
         </div>
       </div>
       <div className="profile-container">
