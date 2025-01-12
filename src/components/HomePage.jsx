@@ -14,8 +14,7 @@ const HomePage = () => {
       <div className="profile-container">
         <div className="profile-info">
           <p className="bio">
-            I am a software developer passionate about creating innovative and efficient solutions. 
-            With experience in JavaScript, React, CSS, and HTML, 
+            I am a software developer passionate and courius about creating innovative and efficient solutions. 
             I enjoy transforming ideas into functional and attractive web applications.
              My goal is to continue learning and growing in the field of software development, 
              contributing to projects that make a difference.
