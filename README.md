@@ -1,4 +1,4 @@
-# 🖥️ Personal Portfolio
+# 🖥️ Personal Portfolio (In Progress🤓)
 
 Hey! This is my personal portfolio built using **React** and **TypeScript**. It showcases my web development projects, skills, and a bit about me. I’ve also used some cool libraries for animations and styling to make it look awesome.
 
