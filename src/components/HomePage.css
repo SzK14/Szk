@@ -36,6 +36,34 @@
     font-size: 1rem;
     color: #bbb;
   }
+  .typewriter-text {
+    border-right: solid 3px rgba(0, 255, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    color: #fff;
+  }
+  .typewriter-text {
+    animation: animated-text 4s steps(29, end) 1s 1 normal both,
+      animated-cursor 600ms steps(29, end) infinite;
+  }
+  @keyframes animated-text {
+    from {
+      width: 0;
+    }
+    to {
+      width: 1260px;
+    }
+  }
+  @keyframes animated-cursor {
+    from {
+      border-right-color: rgba(0, 255, 0, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
   
   .social-links {
     margin-top: 20px;
@@ -84,15 +112,49 @@
   background-size: cover;
   position: relative;
 }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .fog-effect {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(145, 145, 145, 0.7);
-  padding: 20px;
-  border-radius: 10px;
+  background: rgba(50, 50, 50, 0.85); /* Fondo más oscuro */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  text-align: center;
+  backdrop-filter: blur(10px); /* Desenfoque */
+}
+
+.title,
+.subtitle,
+.role {
+  margin: 0;
+  color: #ffffff;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.animated-text {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeInUp 1s ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
 }
 
 .profile-container {
@@ -117,79 +179,92 @@
 .about-btn:hover {
   background-color: #0056b3;
 }
-
-.skills-section {
-  margin-top: 40px;
+.projects-section {
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
 }
 
-.skills-section h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.skills-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.skills-section li {
-  font-size: 1.2em;
-  margin: 5px 0;
-}
-.projects-container {
-  padding: 40px;
-  display: contents;
-
-}
-
-.projects-container h2 {
+.projects-title {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Grid para organizar los proyectos */
+.projects-container {
+  display: flex;
+  justify-content: center;
+}
+
 .projects-grid {
-  display: ruby;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto ajusta las columnas según el tamaño */
-  gap: 20px; /* Espacio entre los elementos */
-  justify-items: center;
-}
-
-/* Estilo para cada item del proyecto */
-.project-item {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 20px;
-  width: 80%;
-
-  max-width: 350px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto hover para los items */
-.project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo de la imagen del proyecto */
-.project-image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   width: 100%;
-  height: fit-content;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  max-width: 1200px;
 }
 
-/* Estilo de los títulos y descripciones */
-.project-item h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+.project-item {
+  background: #292929;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.project-item p {
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+  position: relative;
+}
+
+.projects-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image:hover .hover-overlay {
+  opacity: 1;
+}
+
+.about-button {
+  background: #ff4757;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
   font-size: 1rem;
-  color: #666;
+  transition: background 0.3s ease;
+}
+
+.about-button:hover {
+  background: #e84118;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 5px;
+}
+
+p {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0 0 15px;
 }

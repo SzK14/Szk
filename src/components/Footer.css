@@ -12,21 +12,23 @@ body, html {
   flex-direction: column;
 }
 
-footer {
-  background-color: #1a1a1a;
-  color: white;
+.footer {
+  background-color: #121212; /* O el color que uses */
+  color: #fff;
+  position: fixed; /* Fija el footer al final */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Abarca todo el ancho */
+  padding: 20px 0; /* Ajusta el padding para eliminar espacio extra */
   text-align: center;
-  padding: 1rem 0;
-  width: 100%; /* Hace que el footer abarque toda la pantalla horizontal */
-  margin-top: auto; /* Empuja el footer al final de la página */
 }
 
 .footer-content {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
   
   /* Diseño de los enlaces */
