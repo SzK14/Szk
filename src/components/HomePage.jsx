@@ -15,12 +15,42 @@ const HomePage = () => {
       <div className="profile-container">
         <div className="profile-info">
           <p className="typewriter-text">
-            I am a software developer passionate and courius about creating innovative and efficient solutions. 
-            I enjoy transforming ideas into functional and attractive web applications.
-             My goal is to continue learning and growing in the field of software development, 
-             contributing to projects that make a difference.
+          I am a <span className="highlight">software developer</span> passionate and curious about creating 
+      innovative and efficient solutions. I enjoy transforming ideas into functional 
+      and attractive web applications. My goal is to continue <span className="highlight">learning</span> 
+      and growing in the field of software development, contributing to projects that make a difference.
           </p>
           <a href="/about" className="btn">About</a>
+        </div>
+      </div>
+      <div className="skills-section">
+        <h2 className="skills-title">Skills</h2>
+        <p className="skills-description">The skills, tools, and technologies I use:</p>
+
+        <div className="skills-bento">
+          <div className="skills-box">
+            <h3>Web Development</h3>
+            <img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs" alt="Web Development Skills" />
+            <img src="https://skillicons.dev/icons?i=tailwind,vite,vue,ts,astro,nodejs,wordpress" alt="Web Development Skills" />
+            
+          </div>
+
+          <div className="skills-box">
+            <h3>Mobile Development</h3>
+            <img src="https://skillicons.dev/icons?i=swift,kotlin" alt="Mobile Development Skills" />
+          </div>
+
+          <div className="skills-box">
+            <h3>Game Development</h3>
+            <img src="https://skillicons.dev/icons?i=unity,cs" alt="Game Development Skills" />
+            <img src="https://skillicons.dev/icons?i=unreal,cpp" alt="Game Development Skills" />
+          </div>
+
+          <div className="skills-box">
+            <h3>Tools</h3>
+            <img src="https://skillicons.dev/icons?i=figma,xd,notion,vscode" alt="Tools" />
+            <img src="https://skillicons.dev/icons?i=visualstudio,git,github,vercel" alt="Tools" />
+          </div>
         </div>
       </div>
     

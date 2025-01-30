@@ -36,17 +36,70 @@
     font-size: 1rem;
     color: #bbb;
   }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .cover-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/src/assets/background.jpg') no-repeat center center/cover;
+  }
+  
+  .fog-effect {
+    background: rgba(50, 50, 50, 0.85);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Título más llamativo */
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Efecto de resaltado en palabras clave */
+  .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+  
+  /* Animación del texto tipo máquina de escribir */
   .typewriter-text {
-    border-right: solid 3px rgba(0, 255, 0, 0.75);
+    font-size: 1.2rem;
     white-space: nowrap;
     overflow: hidden;
-    font-family: "Source Code Pro", monospace;
-    font-size: 16px;
-    color: #fff;
+    border-right: 2px solid #ffcc00;
+    animation: typewriter 4s steps(40) 1s forwards;
   }
-  .typewriter-text {
-    animation: animated-text 4s steps(29, end) 1s 1 normal both,
-      animated-cursor 600ms steps(29, end) infinite;
+  
+  /* Botón estilizado */
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ffd633;
+    transform: scale(1.05);
   }
   @keyframes animated-text {
     from {
@@ -79,39 +132,12 @@
   .social-link:hover {
     color: #4caf50;
   }
-  
-  @media (max-width: 768px) {
-    .about-page {
-      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-      text-align: center;
-    }
-  
-    .profile-image {
-      width: 200px;
-      height: 200px;
-      margin-left: 0; /* Eliminar espacio a la izquierda en pantallas pequeñas */
-      margin-bottom: 20px;
-    }
-  
-    .profile-info h1 {
-      font-size: 2rem;
-    }
-  
-    .profile-info p {
-      font-size: 1rem;
-    }
-  }
+
 
 .home-page {
   text-align: center;
 }
 
-.cover-image {
-  background-image: url('path/to/your/cover-image.jpg');
-  height: 400px;
-  background-size: cover;
-  position: relative;
-}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -123,40 +149,6 @@
   }
 }
 
-.fog-effect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(50, 50, 50, 0.85); /* Fondo más oscuro */
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
-  text-align: center;
-  backdrop-filter: blur(10px); /* Desenfoque */
-}
-
-.title,
-.subtitle,
-.role {
-  margin: 0;
-  color: #ffffff;
-}
-
-.animated-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  animation: fadeInUp 1s ease-in-out;
-}
-
-.animated-text {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  animation: fadeInUp 1s ease-in-out;
-  animation-delay: 0.3s;
-  animation-fill-mode: backwards;
-}
-
 .profile-container {
   margin-top: 20px;
 }
@@ -166,19 +158,6 @@
   margin-bottom: 20px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.about-btn:hover {
-  background-color: #0056b3;
-}
 .projects-section {
   padding: 40px 20px;
   background-color: #1e1e1e;
@@ -267,4 +246,25 @@ p {
   font-size: 1rem;
   color: #aaa;
   margin: 0 0 15px;
+}
+@media (max-width: 768px) {
+  .about-page {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    margin-left: 0; /* Eliminar espacio a la izquierda en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
 }

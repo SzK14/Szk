@@ -77,45 +77,54 @@
   .social-link:hover {
     color: #4caf50;
   }
-  
-  /* Estilo para la sección de habilidades (Skills) */
   .skills-section {
     text-align: center;
-    padding: 40px 0;
-    width: 100%;
-    margin-top: 40px; /* Espacio arriba para separarlo del contenido superior */
+    padding: 40px 20px;
+    background-color: #5f5f5f;
   }
   
-  .skills-section h2 {
+  .skills-title {
     font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
-  .skills-section p {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 40px;
+  .skills-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
   }
   
-  .skills-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Espacio entre los íconos */
-    flex-wrap: wrap;
+  .skills-bento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
-  .skills-icons i {
-    font-size: 3rem; /* Ajusta el tamaño de los íconos */
-    color: #fff;
-    transition: transform 0.3s, color 0.3s;
+  .skills-box {
+    background: #363434;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .skills-icons i:hover {
-    transform: scale(1.1); /* Efecto de aumento cuando pasa el ratón */
-    color: #4caf50; /* Cambia el color al verde */
+  .skills-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skills-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .skills-box img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
   }
   
   @media (max-width: 768px) {
