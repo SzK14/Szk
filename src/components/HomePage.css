@@ -1,173 +1,129 @@
-/* Estilo para la página About */
-.about-page {
-    display: flex;
-    justify-content: space-between; /* Organizar la imagen y el texto a los lados */
-    align-items: center;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #fff;
-  }
-  
-  .profile-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 40px; /* Asegura que haya espacio entre la imagen y el texto */
-  }
-  
-  .profile-info {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .profile-info h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .profile-info p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-  
-  .bio {
-    font-size: 1rem;
-    color: #bbb;
-  }
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  .cover-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('/src/assets/background.jpg') no-repeat center center/cover;
-  }
-  
-  .fog-effect {
-    background: rgba(50, 50, 50, 0.85);
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    animation: fadeInUp 1s ease-out;
-  }
-  
-  /* Título más llamativo */
-  .title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-  }
-  
-  /* Efecto de resaltado en palabras clave */
-  .highlight {
-    color: #ffcc00;
-    font-weight: bold;
-  }
-  
-  /* Animación del texto tipo máquina de escribir */
-  .typewriter-text {
-    font-size: 1.2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #ffcc00;
-    animation: typewriter 4s steps(40) 1s forwards;
-  }
-  
-  /* Botón estilizado */
-  .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #ffcc00;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background: #ffd633;
-    transform: scale(1.05);
-  }
-  @keyframes animated-text {
-    from {
-      width: 0;
-    }
-    to {
-      width: 1260px;
-    }
-  }
-  @keyframes animated-cursor {
-    from {
-      border-right-color: rgba(0, 255, 0, 0.75);
-    }
-    to {
-      border-right-color: transparent;
-    }
-  }
-  
-  .social-links {
-    margin-top: 20px;
-  }
-  
-  .social-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1rem;
-  }
-  
-  .social-link:hover {
-    color: #4caf50;
-  }
+/* 🔥 General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
+body {
+  background-color: #111;
+  color: white;
+}
 
-.home-page {
+/* 🔥 Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
+  padding: 20px;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+/* 🔥 Profile Section */
 .profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.profile-info {
+  max-width: 800px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.typewriter-text {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-right: 2px solid white; /* Simula el cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.6s infinite;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.highlight {
+  color: #ff8a00;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
   margin-top: 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.profile-info .bio {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 15px rgba(255, 138, 0, 0.5);
 }
 
+/* 🔥 Projects Section */
 .projects-section {
-  padding: 40px 20px;
-  background-color: #1e1e1e;
-  color: #fff;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .projects-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .projects-container {
@@ -177,94 +133,99 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .project-item {
-  background: #292929;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .project-item:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(255, 138, 0, 0.5);
 }
 
-.project-image {
-  position: relative;
-}
-
-.projects-img {
+.project-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  border-radius: 8px;
 }
 
-.hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-image:hover .hover-overlay {
-  opacity: 1;
-}
-
-.about-button {
-  background: #ff4757;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.about-button:hover {
-  background: #e84118;
-}
-
-h3 {
+.project-item h3 {
+  margin-top: 15px;
   font-size: 1.5rem;
-  margin: 15px 0 5px;
 }
 
-p {
-  font-size: 1rem;
-  color: #aaa;
-  margin: 0 0 15px;
+.project-item p {
+  opacity: 0.8;
 }
+
+/* 🔥 Skills Section (Bento Box Style) */
+.skills-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.skills-bento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-box {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skills-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(255, 138, 0, 0.5);
+}
+
+/* 🔥 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔥 Responsive Design */
 @media (max-width: 768px) {
-  .about-page {
-    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-    text-align: center;
+  .hero-title {
+    font-size: 2.5rem;
   }
-
-  .profile-image {
-    width: 200px;
-    height: 200px;
-    margin-left: 0; /* Eliminar espacio a la izquierda en pantallas pequeñas */
-    margin-bottom: 20px;
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
-
-  .profile-info h1 {
-    font-size: 2rem;
-  }
-
-  .profile-info p {
-    font-size: 1rem;
+  .profile-container {
+    padding: 40px 20px;
   }
 }
