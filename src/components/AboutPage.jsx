@@ -26,8 +26,6 @@ const AboutPage = () => {
       </div>
       <img src="/src/assets/Main.jpg" alt="Seb" className="profile-image"/>
      
-      {/* ------Skills Section-------  */}
-     
     </div>
   );
 };
