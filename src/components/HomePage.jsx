@@ -32,17 +32,6 @@ const HomePage = () => {
           </div>
             <a href="/about" className="btn">About</a>
         </div>
-        <div className="social-links">
-          <a href="https://github.com/SzK14" target="_blank" rel="noopener noreferrer" className="social-link">
-            <i className="fa fa-github"></i> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/sebastian-garcia-dev" target="_blank" rel="noopener noreferrer" className="social-link">
-            <i className="fa fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="mailto:sebaatianj16@gmail.com" className="social-link">
-            <i className="fa fa-envelope"></i> Email
-          </a>
-        </div>
       </section>
 
 
