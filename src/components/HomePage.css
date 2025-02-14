@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #111;
+  background-color: #3c3c3c;
   color: white;
 }
 
@@ -168,6 +168,7 @@ body {
 .skills-section {
   padding: 80px 20px;
   text-align: center;
+  border-radius: 24px;
 }
 
 .skills-title {

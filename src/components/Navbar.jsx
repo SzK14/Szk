@@ -1,21 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import './Navbar.css';
-import { Link } from 'react-router-dom';
-import 'font-awesome/css/font-awesome.min.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
-      <div className="navbar-center">
-      <Link to="/" className="navbar-item ">
-          <i className="fa fa-home"></i> Home
+      <div className="nav-container">
+        {/* Logo */}
+        <Link to="/" className="logo">
+          S.G.
         </Link>
-        <Link to="/about" className="navbar-item about-btn">
-          <i className="fa fa-user"></i> About
-        </Link>
-        <Link to="/work" className="navbar-item">
-          <i className="fa fa-briefcase"></i> Work
-        </Link>
+
+        {/* Menú para pantallas grandes */}
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <Link to="/" className="nav-item">Home</Link>
+          <Link to="/about" className="nav-item">About</Link>
+          <Link to="/work" className="nav-item">Work</Link>
+          <Link to="/contact" className="nav-item">Contact</Link>
+        </div>
       </div>
     </nav>
   );

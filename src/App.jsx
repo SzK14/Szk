@@ -6,6 +6,7 @@ import Navbar from './components/Navbar.jsx';
 import HomePage from './components/HomePage.jsx';
 import AboutPage from './components/AboutPage.jsx';
 import WorkPage from './components/WorkPage.jsx';
+import Contact from './components/Contact.jsx';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/work" element={<WorkPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
       </div>

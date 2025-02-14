@@ -1,63 +1,85 @@
-/* Contenedor principal */
+/* 🔥 General Styles */
 .contact-container {
-    max-width: 500px;
-    margin: 50px auto;
-    text-align: center;
-    background: #222;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Título */
-  .contact-container h2 {
-    color: #ff8a00;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Formulario */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  /* Efecto de foco */
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: 2px solid #e52e71;
-  }
-  
-  /* Botón */
-  .contact-form button {
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
-    color: white;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .contact-form button:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Mensaje de éxito */
-  .success-message {
-    color: #4caf50;
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #222;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Sección Izquierda */
+.contact-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff8a00;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* 📌 Sección Derecha - Formulario */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 10px;
+  border: 1px solid #444;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.input-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* 🛑 Validación */
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+}
+
+/* 📌 Botón */
+.submit-btn {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
