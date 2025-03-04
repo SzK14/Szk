@@ -8,16 +8,13 @@ const HomePage = () => {
       <Helmet>
         <title>Sebastian Garcia - Portfolio</title>
         <meta name="description" content="Sebastian Garcia's portfolio showcasing skills in frontend, mobile, and game development." />
-        <meta name="keywords" content="Sebastian Garcia, frontend developer, mobile developer, game developer, portfolio" />
+        <meta name="keywords" content="Sebastian Garcia, frontend developer, mobile developer, game developer, portfolio, ui/ux design, SEO, google Ads, social media, game development, unity2d, unity3d." />
         <meta name="author" content="Sebastian Garcia" />
         <meta property="og:title" content="Sebastian Garcia - Portfolio" />
         <meta property="og:description" content="Sebastian Garcia's portfolio showcasing skills in frontend, mobile, and game development." />
         <meta property="og:image" content="/src/assets/Main.jpg" />
         <meta property="og:url" content="https://your-portfolio-url.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sebastian Garcia - Portfolio" />
-        <meta name="twitter:description" content="Sebastian Garcia's portfolio showcasing skills in frontend, mobile, and game development." />
-        <meta name="twitter:image" content="/src/assets/Main.jpg" />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       {/* 🔥 HERO SECTION */}
@@ -33,6 +30,7 @@ const HomePage = () => {
         </div>
       </section>
 
+ 
       {/* 🙋‍♂️ PROFILE SECTION */}
       <section className="profile-section">
         <div className="profile-container">

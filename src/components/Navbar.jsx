@@ -9,10 +9,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Logo */}
-        <Link to="/" className="logo">
-          S.G.
-        </Link>
 
         {/* Menú para pantallas grandes */}
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
